@@ -1,3 +1,4 @@
+import { ContactUs } from "./components/ContactUs";
 import FeaturedCourses from "./components/FeaturedCourses";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -23,6 +24,7 @@ export default function Home() {
     <MusicSchoolTestimonial/>
     <UpcomingWebinars/>
     <Instructors/>
+    
     <Footer/>
     </main>
   );
