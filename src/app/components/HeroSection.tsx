@@ -1,42 +1,22 @@
-import Link from "next/link"
-import { Spotlight } from "./ui/Spotlight"
-import { Button } from "./ui/moving-border";
+import React from "react";
+import { BackgroundBeamsWithCollision } from "@/app/components/ui/background-beams-with-collision";
 
-
-function HeroSection() {
+export function BackgroundBeamsWithCollisionDemo() {
   return (
-    <div
-    className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0"
-    >
-        <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="beige"
-      />
-        <div className="p-4 relative z-10 w-full text-center">
-            <h1 
-            className="mt-20 md:mt-0 text-4xl md:text-7xl
-            font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
-            >Master the art of Music</h1>
-            <p
-            className="mt-4 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto"
-            >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste molestiae maiores saepe, pariatur sint tempora laborum illo voluptates ad aliquid dicta a quis enim numquam! Repudiandae, excepturi? Qui, quia suscipit.
-            </p>
-            <div className="mt-4">
-                <Link href={"/courses"}>
-                <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
-                >
-                    Explore Courses
-                    </Button>
-                </Link>
-            </div>
-
+    <BackgroundBeamsWithCollision>
+      <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
+        What&apos;s hotter than Fire?{" "}
+        <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+          <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-red-500 via-red-600 to-red-700 [text-shadow:0_0_rgba(0,0,0,0.1)]">
+            <span className="">Smokin' hot detection.</span>
+          </div>
+          <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-red-500 via-red-600 to-red-700 py-4">
+            <span className="">Smokin' hot detection.</span>
+          </div>
         </div>
-
-    </div>
-  )
+      </h2>
+    </BackgroundBeamsWithCollision>
+  );
 }
 
-export default HeroSection
+export default BackgroundBeamsWithCollisionDemo;
